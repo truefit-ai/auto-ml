@@ -14,7 +14,6 @@ Coverage is provided for four main areas of machine learning:
 All model selection, hyperparameter tuning, and time management occur automatically.<br><br>
 
 
-
 ### Notes:
 
 All code is optimized for an in-memory dataset, less than 300 MB total package, and ten minutes to ten hours of run-time.
