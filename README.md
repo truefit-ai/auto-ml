@@ -21,13 +21,11 @@ All code is optimized for an in-memory dataset, less than 300 MB total package, 
 
 This package won the 2022 AutoML Decathlon hosted by Carnegie Mellon and HP Enterprise (NeurIPS ‘22 Competition), with the best performance on ten out-of-fold tasks.
 
-There are better vision architectures, better augmentation strategies, more unified factoring, and methods more suited to either very large or very small datasets--just not in this package. <br><br>
-
 
 ### Try It:
 ```
+!git clone https://github.com/truefit-ai/auto-ml.git automl
 !pip install -r automl/requirements.txt
-!git clone https://github.com/truefit-ai/auto-ml.git
 ```
 
 ```
@@ -45,10 +43,10 @@ x_data, y_data = data['data'], data['target']
 train_data, test_data = [list(zip(x_data[i::2], y_data[i::2])) for i in range(2)]
 
 def convert(data):
-    return AutoDataset([(torch.as_tensor(x, dtype=torch.float32).unsqueeze(0), 
-                        torch.nn.functional.one_hot(torch.tensor(y), y_data.max() + 1))
+    return AutoDataset([(torch.tensor(x).unsqueeze(0), 
+        torch.nn.functional.one_hot(torch.tensor(y), y_data.max() + 1))
                              for x, y in data], 
-                      Metadata('single-label', 'zero_one_error'))
+                Metadata('single-label', 'zero_one_error'))
 train_dataset = convert(train_data)
 test_dataset = convert(test_data)
 ```
@@ -57,7 +55,8 @@ test_dataset = convert(test_data)
 model = Model(train_dataset.metadata)
 model.train(train_dataset, remaining_time_budget = 0.05 * 3600)
 yp = model.test(test_dataset)
-print('Accuracy: {:.1%}'.format(1 - zero_one_error(yp, torch.stack([e[1] for e in test_dataset]))))
+print('Accuracy: {:.1%}'.format(1 - zero_one_error(yp, 
+            torch.stack([e[1] for e in test_dataset]))))
 ```
 <br>
 
