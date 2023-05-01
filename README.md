@@ -6,10 +6,10 @@ This package learns the most predictive mapping of 1-4d inputs to 1-2d targets.<
 
 Coverage is provided for four main areas of machine learning:
 
-- Image Classification:&nbsp; 2-3d → 1d
-- Segmentation:&nbsp; 2-3d → 2d
-- Sequence/Signal:&nbsp; 1-3d → 1d
-- Tabular:&nbsp; 1d → 1d
+- Image Classification:&nbsp; 2-3d -> 1d
+- Segmentation:&nbsp; 2-3d -> 2d
+- Sequence/Signal:&nbsp; 1-3d-> 1d
+- Tabular:&nbsp; 1d -> 1d
 
 All model selection, hyperparameter tuning, and time management occur automatically.<br><br>
 
@@ -19,7 +19,7 @@ All model selection, hyperparameter tuning, and time management occur automatica
 
 All code is optimized for an in-memory dataset, less than 300 MB total package, and ten minutes to ten hours of run-time.
 
-It won the 2022 AutoML Decathlon hosted by Carnegie Mellon and HP Enterprise (NeurIPS ‘22 Competition), with the best performance on ten out-of-fold tasks.
+This package won the 2022 AutoML Decathlon hosted by Carnegie Mellon and HP Enterprise (NeurIPS ‘22 Competition), with the best performance on ten out-of-fold tasks.
 
 There are better vision architectures, better augmentation strategies, more unified factoring, and methods more suited to either very large or very small datasets--just not in this package. <br><br>
 
