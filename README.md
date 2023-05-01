@@ -61,9 +61,9 @@ print('Accuracy: {:.1%}'.format(1 - zero_one_error(yp,
 <br>
 
 ### License
-All rights reserved; may not be incorporated into automated machine learning packages.
 
-You are granted a perpetual and royalty-free license to use for any other purpose, including model training and deployment in any form that is not intended as an automated machine system.
+All rights reserved; incorporation into externally released or promoted automated machine learning packages is prohibited.
 
-This license automatically converts to an MIT License if more than twelve months elapse without update to this repo.
+You are granted a perpetual, royalty-free license to use this content for any other purpose, including internal model training and deployment, as well as external uses that are not intended for automated machine learning systems.
 
+If more than twelve months elapse without an update to this repository, this license automatically converts to an MIT License in all cases.
