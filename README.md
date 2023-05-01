@@ -20,7 +20,7 @@ All model selection, hyperparameter tuning, and time management occur automatica
 All code is optimized for an in-memory dataset, less than 300 MB total package, and ten minutes to ten hours of run-time.
 
 This package won the 2022 AutoML Decathlon hosted by Carnegie Mellon and HP Enterprise (NeurIPS ‘22 Competition), with the best performance on ten out-of-fold tasks.
-
+<br><br>
 
 ### Try It:
 ```
